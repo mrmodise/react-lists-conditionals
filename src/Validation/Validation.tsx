@@ -1,9 +1,19 @@
 import React from 'react';
 
-function Validation(props: any) {
+interface UserInput {
+    userInputLength: 0
+}
+
+function Validation(props: UserInput) {
     return (
         <div className="App">
-            <input type="text" onChange={props.changed}/>
+            <p>{props.userInputLength}</p>
+            {
+                props?.userInputLength > 5 ?
+                    <p>Text long enough</p>
+                    :
+                    <p>Text too short</p>
+            }
         </div>
     );
 }
