@@ -1,27 +1,22 @@
 import React from 'react';
 
 interface UserInput {
-    userInputLength: 0
+    character: string,
+    clicked: any
 }
 
-const style = {
-    display: 'inline-block',
-    padding: '16px',
-    textAlign: 'center',
-    margin: '16px',
-    border: '1px solid black'
-};
-
 function Char(props: UserInput) {
+    const style: any = {
+        display: "inline-block",
+        padding: "16px",
+        textAlign: "center",
+        margin: "16px",
+        border: "1px solid black"
+    };
+
     return (
-        <div className="App">
-            <p>{props.userInputLength}</p>
-            {
-                props?.userInputLength > 5 ?
-                    <p>Text long enough</p>
-                    :
-                    <p>Text too short</p>
-            }
+        <div className="App" style={style} onClick={props.clicked}>
+            {props.character}
         </div>
     );
 }
