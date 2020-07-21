@@ -2,7 +2,7 @@ import React from 'react';
 
 interface UserInput {
     character: string,
-    clicked: any
+    [prop: string]: any
 }
 
 function Char(props: UserInput) {

@@ -1,7 +1,8 @@
 import React from 'react';
 
 interface UserInput {
-    userInputLength: 0
+    userInputLength: 0,
+    [prop: string]: any
 }
 
 function Validation(props: UserInput) {
